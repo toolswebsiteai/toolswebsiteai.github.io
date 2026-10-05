@@ -5,7 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tools & Smart Components Hub - ToolsWebsiteAI</title>
     <meta name="description" content="Explore best AI tools, smart article writers, image generators, and SEO optimizers.">
+    <meta name="author" content="Nazim Mustafa">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     
+    <!-- STRICT EXISTING CANONICAL URL -->
+    <link rel="canonical" href="https://toolswebsiteai.github.io/">
+
+    <!-- ACCURATE SCHEMA.ORG JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://toolswebsiteai.github.io/#organization",
+          "name": "ToolsWebsiteAI",
+          "url": "https://toolswebsiteai.github.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://toolswebsiteai.github.io/#logo",
+            "url": "https://toolswebsiteai.github.io/images/logo.png",
+            "contentUrl": "https://toolswebsiteai.github.io/images/logo.png",
+            "caption": "ToolsWebsiteAI"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://toolswebsiteai.github.io/#website",
+          "url": "https://toolswebsiteai.github.io/",
+          "name": "ToolsWebsiteAI",
+          "publisher": {
+            "@id": "https://toolswebsiteai.github.io/#organization"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://toolswebsiteai.github.io/#webpage",
+          "url": "https://toolswebsiteai.github.io/",
+          "name": "AI Tools & Smart Components Hub - ToolsWebsiteAI",
+          "description": "Explore best AI tools, smart article writers, image generators, and SEO optimizers.",
+          "isPartOf": {
+            "@id": "https://toolswebsiteai.github.io/#website"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://toolswebsiteai.github.io/#author",
+          "name": "Nazim Mustafa"
+        }
+      ]
+    }
+    </script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -65,7 +117,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-955 text-slate-100 min-h-screen flex flex-col">
+<body class="bg-slate-955 text-slate-100 min-h-screen flex flex-col justify-between">
 
     <!-- HEADER / NAVBAR -->
     <header class="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
@@ -77,14 +129,14 @@
 
             <!-- SEARCH BAR -->
             <div class="flex-1 max-w-md relative">
-                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-                <input type="text" id="toolSearch" placeholder="Search AI tools (e.g. Article Writer, Image Generator)..." class="w-full bg-slate-800 text-xs pl-9 pr-4 py-2.5 rounded-full border border-slate-700 focus:border-brand-500 focus:outline-none transition text-white">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs" aria-hidden="true"></i>
+                <input type="text" id="toolSearch" placeholder="Search AI tools (e.g. Article Writer, Image Generator)..." aria-label="Search AI tools" class="w-full bg-slate-800 text-xs pl-9 pr-4 py-2.5 rounded-full border border-slate-700 focus:border-brand-500 focus:outline-none transition text-white">
             </div>
         </div>
     </header>
 
     <!-- HERO BANNER -->
-    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 py-8 w-full space-y-8">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 w-full space-y-8">
         <section class="bg-gradient-to-r from-brand-600 to-indigo-700 text-white p-6 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden">
             <div class="max-w-2xl space-y-3 relative z-10">
                 <span class="bg-white/20 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Next-Gen AI Directory</span>
@@ -97,7 +149,7 @@
         <section class="space-y-4">
             <div class="flex justify-between items-center">
                 <h2 class="text-lg font-bold flex items-center gap-2">
-                    <i class="fa-solid fa-cubes text-brand-500"></i> Available AI Tools
+                    <i class="fa-solid fa-cubes text-brand-500" aria-hidden="true"></i> Available AI Tools
                 </h2>
                 <span id="toolsCount" class="text-xs text-slate-400 font-medium">Loading...</span>
             </div>
@@ -109,8 +161,14 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-400">
+    <!-- FOOTER WITH POLICY LINKS -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-8 mt-12 text-center text-xs text-slate-400 space-y-3">
+        <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-slate-400 font-semibold px-4">
+            <a href="about.html" class="hover:text-sky-400 transition">About Us</a>
+            <a href="contact.html" class="hover:text-sky-400 transition">Contact Us</a>
+            <a href="privacy-policy.html" class="hover:text-sky-400 transition">Privacy Policy</a>
+            <a href="terms.html" class="hover:text-sky-400 transition">Terms & Conditions</a>
+        </div>
         <p>© 2026 ToolsWebsiteAI.github.io. All rights reserved.</p>
     </footer>
 
