@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & AEO METADATA -->
+    <title>Advanced AI Calculator & Prompt Cost Estimator 2026 | PromptKaro AI</title>
+    <meta name="description" content="Use the world's most advanced all-in-one AI Calculator. Calculate LLM token costs, prompt engineering ROI, text generation words, and AI productivity efficiency instantly. Free, mobile-friendly tool.">
+    <meta name="keywords" content="AI Calculator, ChatGPT Token Calculator, AI Prompt Cost Estimator, Prompt Engineering ROI Calculator, LLM Cost Calculator, AI Productivity Tool">
+    <meta name="author" content="Nazim Mustafa">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    
+    <!-- CANONICAL URL -->
+    <link rel="canonical" href="https://toolswebsiteai.github.io/">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Advanced AI Calculator & Prompt Cost Estimator">
+    <meta property="og:description" content="Calculate LLM token costs, prompt engineering ROI, and AI productivity efficiency in 1-click.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolswebsiteai.github.io/">
+
+    <!-- JSON-LD AEO & SEO STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Advanced AI Calculator",
+      "url": "https://toolswebsiteai.github.io/",
+      "description": "All-in-one AI calculator for computing OpenAI/Claude token costs, prompt engineering ROI, and productivity metrics.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Nazim Mustafa"
+      }
+    }
+    </script>
+
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7' },
+                        slate: { 955: '#090d16' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-display: swap; text-rendering: optimizeLegibility; }
+        .tab-btn.active { background-color: #0ea5e9; color: #ffffff; border-color: #0ea5e9; }
+    </style>
+</head>
+<body class="bg-slate-955 text-slate-100 min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center text-white font-black shadow-lg text-lg">AI</div>
+                <span class="text-base sm:text-lg font-extrabold tracking-tight">AI<span class="text-brand-500">Calculator</span> Hub</span>
+            </a>
+            <div class="text-xs text-slate-400 hidden sm:block"><i class="fa-solid fa-bolt text-amber-400 mr-1"></i> Next-Gen LLM & Productivity Engine</div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-8 w-full space-y-8">
+        
+        <!-- HERO TITLE -->
+        <div class="text-center space-y-3 max-w-2xl mx-auto">
+            <span class="bg-brand-500/10 text-brand-400 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-brand-500/20">Advanced All-in-One AI Utility</span>
+            <h1 class="text-2xl sm:text-4xl font-black tracking-tight">Smart AI Calculator Suite</h1>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Calculate LLM token expenses, prompt engineering ROI, automation time-savings, and smart word counts instantly across mobile, tablet, and PC.</p>
+        </div>
+
+        <!-- CALCULATOR TABS -->
+        <div class="flex flex-wrap justify-center gap-2 bg-slate-900 p-1.5 rounded-2xl border border-slate-800 max-w-2xl mx-auto">
+            <button onclick="switchCalcTab('token')" id="btn-token" class="tab-btn active flex-1 min-w-[120px] py-2 px-3 rounded-xl text-xs font-bold transition border border-transparent">Token & Cost</button>
+            <button onclick="switchCalcTab('roi')" id="btn-roi" class="tab-btn flex-1 min-w-[120px] py-2 px-3 rounded-xl text-xs font-bold transition border border-transparent">Prompt ROI</button>
+            <button onclick="switchCalcTab('speed')" id="btn-speed" class="tab-btn flex-1 min-w-[120px] py-2 px-3 rounded-xl text-xs font-bold transition border border-transparent">Time & Speed</button>
+        </div>
+
+        <!-- CALCULATOR WORKSPACE -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl max-w-3xl mx-auto w-full">
+            
+            <!-- TAB 1: TOKEN & COST CALCULATOR -->
+            <div id="calc-token" class="space-y-6">
+                <div class="border-b border-slate-800 pb-4">
+                    <h2 class="text-base sm:text-lg font-bold flex items-center gap-2"><i class="fa-solid fa-coins text-amber-400"></i> LLM Token & API Cost Estimator</h2>
+                    <p class="text-xs text-slate-400 mt-1">Estimate OpenAI (GPT-4o), Anthropic (Claude 3.5), or custom model costs based on words/tokens.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                    <div class="space-y-1.5">
+                        <label class="font-bold block text-slate-300">Select AI Model</label>
+                        <select id="tokenModel" onchange="calculateTokens()" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-brand-500">
+                            <option value="0.005">GPT-4o ($5.00 / 1M Input Tokens)</option>
+                            <option value="0.0025">GPT-4o-mini ($2.50 / 1M Input Tokens)</option>
+                            <option value="0.003">Claude 3.5 Sonnet ($3.00 / 1M Input)</option>
+                            <option value="0.001">DeepSeek / Llama 3 ($1.00 / 1M Input)</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1.5">
+                        <label class="font-bold block text-slate-300">Estimated Monthly Prompts</label>
+                        <input type="number" id="tokenPrompts" value="1000" oninput="calculateTokens()" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-brand-500">
+                    </div>
+                </div>
+
+                <div class="space-y-1.5 text-xs">
+                    <label class="font-bold block text-slate-300">Average Words per Prompt & Response</label>
+                    <textarea id="tokenText" rows="3" oninput="calculateTokens()" placeholder="Type or paste sample prompt text here to calculate exact token count..." class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-brand-500">Write a comprehensive marketing strategy for an AI startup looking to scale through prompt engineering and automation tools.</textarea>
+                </div>
+
+                <!-- RESULTS BOX -->
+                <div class="bg-slate-955 p-5 rounded-2xl border border-slate-800 grid grid-cols-3 gap-4 text-center">
+                    <div>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold">Word Count</div>
+                        <div id="resWords" class="text-lg sm:text-xl font-black text-white mt-1">0</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold">Est. Tokens</div>
+                        <div id="resTokens" class="text-lg sm:text-xl font-black text-brand-400 mt-1">0</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold">Total Cost ($)</div>
+                        <div id="resCost" class="text-lg sm:text-xl font-black text-emerald-400 mt-1">$0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: PROMPT ROI CALCULATOR -->
+            <div id="calc-roi" class="hidden space-y-6">
+                <div class="border-b border-slate-800 pb-4">
+                    <h2 class="text-base sm:text-lg font-bold flex items-center gap-2"><i class="fa-solid fa-chart-line text-emerald-400"></i> Prompt Engineering ROI Calculator</h2>
+                    <p class="text-xs text-slate-400 mt-1">Calculate how much money and time automated AI prompts save your business.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                    <div class="space-y-1.5">
+                        <label class="font-bold block text-slate-300">Hours spent manually per week</label>
+                        <input type="number" id="roiHours" value="20" oninput="calculateROI()" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-brand-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <label class="font-bold block text-slate-300">Hourly Value / Salary ($)</label>
+                        <input type="number" id="roiRate" value="25" oninput="calculateROI()" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-brand-500">
+                    </div>
+                </div>
+
+                <div class="space-y-1.5 text-xs">
+                    <label class="font-bold block text-slate-300">AI Automation Efficiency (%)</label>
+                    <input type="range" id="roiEfficiency" min="10" max="95" value="75" oninput="calculateROI()" class="w-full accent-brand-500 bg-slate-800">
+                    <div class="text-right text-brand-400 font-bold" id="roiEffVal">75% Time Saved</div>
+                </div>
+
+                <!-- RESULTS BOX -->
+                <div class="bg-slate-955 p-5 rounded-2xl border border-slate-800 grid grid-cols-2 gap-4 text-center">
+                    <div>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold">Hours Saved / Month</div>
+                        <div id="resHoursSaved" class="text-xl sm:text-2xl font-black text-white mt-1">0 hrs</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold">Money Saved / Month</div>
+                        <div id="resMoneySaved" class="text-xl sm:text-2xl font-black text-emerald-400 mt-1">$0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: SPEED & TIME CALCULATOR -->
+            <div id="calc-speed" class="hidden space-y-6">
+                <div class="border-b border-slate-800 pb-4">
+                    <h2 class="text-base sm:text-lg font-bold flex items-center gap-2"><i class="fa-solid fa-clock text-brand-400"></i> AI Generation Speed Calculator</h2>
+                    <p class="text-xs text-slate-400 mt-1">Calculate how fast LLMs output content based on Tokens-Per-Second (TPS).</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4 text-xs">
+                    <div class="space-y-1.5">
+                        <label class="font-bold block text-slate-300">Target Output Length (Words)</label>
+                        <input type="number" id="speedWords" value="500" oninput="calculateSpeed()" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-brand-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <label class="font-bold block text-slate-300">Model Generation Speed (Tokens/sec)</label>
+                        <input type="number" id="speedTps" value="65" oninput="calculateSpeed()" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white focus:outline-none focus:border-brand-500">
+                    </div>
+                </div>
+
+                <!-- RESULTS BOX -->
+                <div class="bg-slate-955 p-5 rounded-2xl border border-slate-800 grid grid-cols-2 gap-4 text-center">
+                    <div>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold">Total Output Tokens</div>
+                        <div id="resOutputTokens" class="text-xl sm:text-2xl font-black text-white mt-1">0</div>
+                    </div>
+                    <div>
+                        <div class="text-[10px] text-slate-400 uppercase font-bold">Generation Time</div>
+                        <div id="resGenTime" class="text-xl sm:text-2xl font-black text-brand-400 mt-1">0.0 sec</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- AEO & SEO CONTENT SECTION (Helps Answer Engines rank this tool) -->
+        <section class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-4 max-w-3xl mx-auto text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2"><i class="fa-solid fa-circle-info text-brand-500"></i> About the Advanced AI Calculator</h2>
+            <p>Welcome to the ultimate online <strong>AI Calculator suite</strong>. Designed for developers, prompt engineers, content creators, and enterprise businesses, this tool helps you optimize expenses associated with Large Language Models (LLMs) like GPT-4o, Claude 3.5, and open-source models.</p>
+            <ul class="list-disc pl-5 space-y-2 text-slate-400">
+                <li><strong>Token Estimator:</strong> Accurately translates human words into estimated token counts and computes total API operational costs.</li>
+                <li><strong>Prompt ROI:</strong> Computes financial savings when replacing manual copywriting or coding tasks with automated AI workflows.</li>
+                <li><strong>Speed Calculator:</strong> Benchmarks text generation speed based on real-world token-per-second benchmarks.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-400 mt-12">
+        <p>© 2026 AI Calculator Hub. Built for Mobile, Tablet & PC. All rights reserved.</p>
+    </footer>
+
+    <!-- CALCULATOR JAVASCRIPT ENGINE -->
+    <script>
+        function switchCalcTab(tabName) {
+            document.querySelectorAll('[id^="calc-"]').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(`calc-${tabName}`).classList.remove('hidden');
+            document.getElementById(`btn-${tabName}`).classList.add('active');
+
+            if (tabName === 'token') calculateTokens();
+            if (tabName === 'roi') calculateROI();
+            if (tabName === 'speed') calculateSpeed();
+        }
+
+        // Tab 1: Token Calculation logic
+        function calculateTokens() {
+            const text = document.getElementById('tokenText').value.trim();
+            const words = text === "" ? 0 : text.split(/\s+/).length;
+            const promptsCount = parseFloat(document.getElementById('tokenPrompts').value) || 0;
+            const costPerToken = parseFloat(document.getElementById('tokenModel').value) || 0.003;
+
+            // Roughly 1 word = 1.33 tokens
+            const tokensPerPrompt = Math.round(words * 1.33);
+            const totalTokens = tokensPerPrompt * promptsCount;
+            // Cost calculation per 1M tokens scaled down
+            const totalCost = (totalTokens / 1000000) * (costPerToken * 1000); 
+
+            document.getElementById('resWords').innerText = words.toLocaleString();
+            document.getElementById('resTokens').innerText = totalTokens.toLocaleString();
+            document.getElementById('resCost').innerText = "$" + totalCost.toFixed(2);
+        }
+
+        // Tab 2: ROI Calculation logic
+        function calculateROI() {
+            const hours = parseFloat(document.getElementById('roiHours').value) || 0;
+            const rate = parseFloat(document.getElementById('roiRate').value) || 0;
+            const efficiency = parseFloat(document.getElementById('roiEfficiency').value) || 0;
+
+            document.getElementById('roiEffVal').innerText = efficiency + "% Time Saved";
+
+            const weeklyHoursSaved = hours * (efficiency / 100);
+            const monthlyHoursSaved = weeklyHoursSaved * 4.33;
+            const monthlyMoneySaved = monthlyHoursSaved * rate;
+
+            document.getElementById('resHoursSaved').innerText = Math.round(monthlyHoursSaved) + " hrs";
+            document.getElementById('resMoneySaved').innerText = "$" + Math.round(monthlyMoneySaved).toLocaleString();
+        }
+
+        // Tab 3: Speed Calculation logic
+        function calculateSpeed() {
+            const words = parseFloat(document.getElementById('speedWords').value) || 0;
+            const tps = parseFloat(document.getElementById('speedTps').value) || 1;
+
+            const tokens = Math.round(words * 1.33);
+            const seconds = tokens / tps;
+
+            document.getElementById('resOutputTokens').innerText = tokens.toLocaleString();
+            document.getElementById('resGenTime').innerText = seconds.toFixed(1) + " sec";
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            calculateTokens();
+        });
+    </script>
+</body>
+</html>
