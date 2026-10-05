@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools & Smart Components Hub - ToolsWebsiteAI</title>
+    <meta name="description" content="Explore best AI tools, smart article writers, image generators, and SEO optimizers.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7' },
+                        slate: { 955: '#090d16' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-display: swap; text-rendering: optimizeLegibility; }
+        .ai-components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .ai-comp-card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        .ai-comp-card:hover {
+            transform: translateY(-5px);
+            border-color: #0ea5e9;
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.15);
+        }
+        .ai-comp-img {
+            width: 100%;
+            height: 150px;
+            background-color: #1f2937;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .ai-comp-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-slate-955 text-slate-100 min-h-screen flex flex-col">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-500 to-indigo-600 flex items-center justify-center text-white font-black shadow-md text-lg">T</div>
+                <span class="text-base sm:text-lg font-extrabold tracking-tight">ToolsWebsite<span class="text-brand-500">AI</span></span>
+            </a>
+
+            <!-- SEARCH BAR -->
+            <div class="flex-1 max-w-md relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input type="text" id="toolSearch" placeholder="Search AI tools (e.g. Article Writer, Image Generator)..." class="w-full bg-slate-800 text-xs pl-9 pr-4 py-2.5 rounded-full border border-slate-700 focus:border-brand-500 focus:outline-none transition text-white">
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 py-8 w-full space-y-8">
+        <section class="bg-gradient-to-r from-brand-600 to-indigo-700 text-white p-6 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+            <div class="max-w-2xl space-y-3 relative z-10">
+                <span class="bg-white/20 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Next-Gen AI Directory</span>
+                <h1 class="text-2xl sm:text-4xl font-black leading-tight">Explore Best AI Tools & Smart Components</h1>
+                <p class="text-xs sm:text-sm text-blue-100 leading-relaxed">Discover top-rated AI article writers, smart image generators, and optimization utilities in one place.</p>
+            </div>
+        </section>
+
+        <!-- TOOLS GRID SECTION -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 class="text-lg font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-cubes text-brand-500"></i> Available AI Tools
+                </h2>
+                <span id="toolsCount" class="text-xs text-slate-400 font-medium">Loading...</span>
+            </div>
+
+            <!-- Dynamic Tools Container -->
+            <div id="aiComponentsGrid" class="ai-components-grid">
+                <!-- Loaded via script.js -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-400">
+        <p>© 2026 ToolsWebsiteAI.github.io. All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPT FILE -->
+    <script src="script.js"></script>
+</body>
+</html>
