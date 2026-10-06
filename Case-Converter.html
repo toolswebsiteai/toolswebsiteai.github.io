@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolsWebsiteAI - Free Online Smart Tools</title>
+    <meta name="description" content="Free online utility tools featuring an Advanced Text Case Converter and a Secure Password Generator. Fast, clean, and 100% free.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #f1f5f9;
+            --card-bg: #ffffff;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --danger: #ef4444;
+            --success: #10b981;
+            --radius: 12px;
+            --font-main: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            padding: 1.5rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        header h1 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        /* Container & Navigation */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: var(--border);
+            padding: 5px;
+            border-radius: var(--radius);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            background: transparent;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: var(--card-bg);
+            color: var(--primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Tool Sections */
+        .tool-section {
+            display: none;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .tool-section.active {
+            display: block;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Inputs & Buttons */
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 1rem;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+            resize: vertical;
+            margin-bottom: 10px;
+            transition: border 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        button {
+            cursor: pointer;
+            font-family: var(--font-main);
+        }
+
+        .btn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-case {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .btn-case:hover {
+            background: var(--border);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+        }
+        
+        .btn-danger {
+            background: transparent;
+            color: var(--danger);
+            border: 1px solid var(--danger);
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-danger:hover {
+            background: #fef2f2;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Password Generator Styles */
+        .pwd-display {
+            background: var(--bg-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .pwd-display span {
+            font-size: 1.5rem;
+            font-family: monospace;
+            font-weight: 600;
+            color: var(--text-main);
+            word-break: break-all;
+        }
+
+        .pwd-copy {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .pwd-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .control-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .flex-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .w-100 { width: 100%; }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--text-main);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .checkbox-group { grid-template-columns: 1fr; }
+            .flex-actions { flex-direction: column; }
+            .btn-danger { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>ToolsWebsiteAI</h1>
+        <p>Free, Fast & Secure Utilities</p>
+    </header>
+
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" id="tab-text" onclick="switchTab('text')">Text Converter</button>
+            <button class="tab-btn" id="tab-pass" onclick="switchTab('pass')">Password Generator</button>
+        </div>
+
+        <!-- TOOL 1: Text & Case Converter -->
+        <div class="tool-section active" id="tool-text">
+            <h2>Text Formatter & Case Converter</h2>
+            
+            <div class="stats-bar">
+                <span id="char-count">Characters: 0</span>
+                <span id="word-count">Words: 0</span>
+            </div>
+
+            <textarea id="text-input" placeholder="Type or paste your text here to convert..."></textarea>
+            
+            <div class="btn-grid">
+                <button class="btn-case" onclick="changeCase('upper')">UPPERCASE</button>
+                <button class="btn-case" onclick="changeCase('lower')">lowercase</button>
+                <button class="btn-case" onclick="changeCase('title')">Title Case</button>
+                <button class="btn-case" onclick="changeCase('sentence')">Sentence case</button>
+            </div>
+
+            <div class="flex-actions">
+                <button class="btn-primary" onclick="copyText()">Copy Text</button>
+                <button class="btn-danger" onclick="clearText()">Clear Input</button>
+            </div>
+        </div>
+
+        <!-- TOOL 2: Secure Password Generator -->
+        <div class="tool-section" id="tool-pass">
+            <h2>Secure Password Generator</h2>
+            
+            <div class="pwd-display">
+                <span id="pwd-result">Click Generate...</span>
+                <button class="pwd-copy" onclick="copyPassword()">Copy</button>
+            </div>
+
+            <div class="pwd-controls">
+                <div class="control-group">
+                    <label>Password Length: <span id="length-val">16</span> characters</label>
+                    <input type="range" id="pwd-length" min="8" max="64" value="16" oninput="updateLength(this.value)">
+                </div>
+
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="chk-upper" checked> Include Uppercase (A-Z)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="chk-lower" checked> Include Lowercase (a-z)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="chk-number" checked> Include Numbers (0-9)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="chk-symbol" checked> Include Symbols (!@#$)
+                    </label>
+                </div>
+
+                <button class="btn-primary w-100" onclick="generatePassword()">Generate Secure Password</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Action Successful!</div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- Tab Switching Logic ---
+        function switchTab(tabId) {
+            // Remove active classes
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tool-section').forEach(sec => sec.classList.remove('active'));
+            
+            // Add active classes to selected
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            document.getElementById(`tool-${tabId}`).classList.add('active');
+        }
+
+        // --- Toast Notification Logic ---
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.innerText = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // --- TOOL 1: Text Converter Logic ---
+        const textInput = document.getElementById('text-input');
+        
+        // Live Counter update
+        textInput.addEventListener('input', () => {
+            const text = textInput.value;
+            document.getElementById('char-count').innerText = `Characters: ${text.length}`;
+            
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            document.getElementById('word-count').innerText = `Words: ${words.length}`;
+        });
+
+        function changeCase(type) {
+            let text = textInput.value;
+            if(!text) return showToast('Please enter some text first!');
+
+            if(type === 'upper') textInput.value = text.toUpperCase();
+            if(type === 'lower') textInput.value = text.toLowerCase();
+            
+            if(type === 'title') {
+                textInput.value = text.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+            }
+            if(type === 'sentence') {
+                textInput.value = text.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, char => char.toUpperCase());
+            }
+            showToast('Text converted successfully!');
+        }
+
+        function copyText() {
+            if(!textInput.value) return showToast('Nothing to copy!');
+            navigator.clipboard.writeText(textInput.value).then(() => showToast('Text copied to clipboard!'));
+        }
+
+        function clearText() {
+            textInput.value = '';
+            textInput.dispatchEvent(new Event('input')); // reset counters
+            showToast('Text cleared!');
+        }
+
+        // --- TOOL 2: Password Generator Logic ---
+        function updateLength(val) {
+            document.getElementById('length-val').innerText = val;
+        }
+
+        function generatePassword() {
+            const length = document.getElementById('pwd-length').value;
+            const incUpper = document.getElementById('chk-upper').checked;
+            const incLower = document.getElementById('chk-lower').checked;
+            const incNumber = document.getElementById('chk-number').checked;
+            const incSymbol = document.getElementById('chk-symbol').checked;
+
+            const upperChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const lowerChars = 'abcdefghijklmnopqrstuvwxyz';
+            const numberChars = '0123456789';
+            const symbolChars = '!@#$%^&*()_+~|}{[]:;?><,./-=';
+
+            let charPool = '';
+            if (incUpper) charPool += upperChars;
+            if (incLower) charPool += lowerChars;
+            if (incNumber) charPool += numberChars;
+            if (incSymbol) charPool += symbolChars;
+
+            if (charPool === '') {
+                showToast('Please select at least one option!');
+                return;
+            }
+
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * charPool.length);
+                password += charPool[randomIndex];
+            }
+
+            document.getElementById('pwd-result').innerText = password;
+        }
+
+        function copyPassword() {
+            const pwd = document.getElementById('pwd-result').innerText;
+            if (pwd === 'Click Generate...') {
+                showToast('Generate a password first!');
+                return;
+            }
+            navigator.clipboard.writeText(pwd).then(() => showToast('Password copied to clipboard!'));
+        }
+
+        // Generate a password on initial load
+        generatePassword();
+    </script>
+</body>
+</html>
