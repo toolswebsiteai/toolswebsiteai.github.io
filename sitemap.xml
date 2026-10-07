@@ -48,5 +48,14 @@
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
+    
+<!-- Text Cleaners Page -->
+    <url>
+        <loc>https://toolswebsiteai.github.io/Free-Text-Cleaner-Online–Clean-Format-Fix-Text.html</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
 
 </urlset>
