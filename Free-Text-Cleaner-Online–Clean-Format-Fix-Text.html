@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Dynamic Meta Tags (Will be updated by JS if TOOL_NAME changes) -->
+    <title class="dynamic-meta-title">Free Text Cleaner Online | Remove Extra Spaces & Formatting</title>
+    <meta name="title" content="Free Text Cleaner Online | Remove Extra Spaces & Formatting" class="dynamic-meta-title-tag">
+    <meta name="description" content="Use our free Text Cleaner to remove extra spaces, empty lines, duplicate lines, and special characters. Clean your text instantly with 100% local browser processing." class="dynamic-meta-desc">
+    <link rel="canonical" href="https://toolswebsiteai.github.io/text-cleaner">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolswebsiteai.github.io/text-cleaner">
+    <meta property="og:title" content="Free Text Cleaner Online | Remove Extra Spaces & Formatting" class="dynamic-og-title">
+    <meta property="og:description" content="Clean your text instantly online. Remove duplicate lines, formatting, and unwanted characters directly in your browser." class="dynamic-og-desc">
+    <meta property="og:image" content="https://toolswebsiteai.github.io/assets/images/text-cleaner-og.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://toolswebsiteai.github.io/text-cleaner">
+    <meta property="twitter:title" content="Free Text Cleaner Online | Remove Extra Spaces & Formatting" class="dynamic-twitter-title">
+    <meta property="twitter:description" content="Clean your text instantly online. Remove duplicate lines, formatting, and unwanted characters directly in your browser." class="dynamic-twitter-desc">
+    <meta property="twitter:image" content="https://toolswebsiteai.github.io/assets/images/text-cleaner-twitter.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#4f46e5', secondary: '#4338ca' }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+        .checkbox-container input:checked + div { background-color: #4f46e5; border-color: #4f46e5; color: white; }
+        .checkbox-container input:checked + div svg { display: block; }
+        .glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .article-content h2 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; color: #1e293b; }
+        .article-content h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #334155; }
+        .article-content p { margin-bottom: 1rem; line-height: 1.7; color: #475569; }
+        .article-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #475569; }
+        .article-content li { margin-bottom: 0.5rem; }
+    </style>
+
+    <!-- JSON-LD Structured Data (10 Types) -->
+    <script type="application/ld+json" id="schema-jsonld">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://toolswebsiteai.github.io/#website",
+          "url": "https://toolswebsiteai.github.io/",
+          "name": "ToolsWebsiteAI",
+          "description": "Free modern AI and productivity online tools.",
+          "publisher": { "@id": "https://toolswebsiteai.github.io/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://toolswebsiteai.github.io/#organization",
+          "name": "ToolsWebsiteAI",
+          "url": "https://toolswebsiteai.github.io/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://toolswebsiteai.github.io/logo.png"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://toolswebsiteai.github.io/#person",
+          "name": "Tools Developer",
+          "url": "https://toolswebsiteai.github.io/"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://toolswebsiteai.github.io/text-cleaner#webpage",
+          "url": "https://toolswebsiteai.github.io/text-cleaner",
+          "name": "Free Text Cleaner Online | Remove Extra Spaces & Formatting",
+          "isPartOf": { "@id": "https://toolswebsiteai.github.io/#website" },
+          "about": { "@id": "https://toolswebsiteai.github.io/#organization" },
+          "description": "Use our free Text Cleaner to remove extra spaces, empty lines, duplicate lines, and special characters."
+        },
+        {
+          "@type": "ImageObject",
+          "@id": "https://toolswebsiteai.github.io/text-cleaner#image",
+          "url": "https://toolswebsiteai.github.io/assets/images/text-cleaner-og.png",
+          "width": "1200",
+          "height": "630",
+          "caption": "Text Cleaner Interface"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://toolswebsiteai.github.io/text-cleaner#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://toolswebsiteai.github.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Text Tools", "item": "https://toolswebsiteai.github.io/text-tools" },
+            { "@type": "ListItem", "position": 3, "name": "Text Cleaner" }
+          ]
+        },
+        {
+          "@type": "Article",
+          "@id": "https://toolswebsiteai.github.io/text-cleaner#article",
+          "isPartOf": { "@id": "https://toolswebsiteai.github.io/text-cleaner#webpage" },
+          "headline": "The Ultimate Guide to Using a Text Cleaner Online",
+          "description": "Learn what a text cleaner is, why you need it, and how to instantly fix formatting errors, extra spaces, and duplicate lines.",
+          "author": { "@id": "https://toolswebsiteai.github.io/#person" },
+          "publisher": { "@id": "https://toolswebsiteai.github.io/#organization" },
+          "mainEntityOfPage": "https://toolswebsiteai.github.io/text-cleaner"
+        },
+        {
+          "@type": "HowTo",
+          "@id": "https://toolswebsiteai.github.io/text-cleaner#howto",
+          "name": "How to Clean Text Online",
+          "description": "Step-by-step instructions on how to remove unwanted formatting from your text.",
+          "step": [
+            { "@type": "HowToStep", "name": "Step 1: Paste Your Text", "text": "Copy the messy text from your source and click the 'Paste' button inside the Text Cleaner input area." },
+            { "@type": "HowToStep", "name": "Step 2: Select Cleaning Options", "text": "Check the boxes for the formatting you want to remove, such as 'Remove extra spaces' or 'Remove duplicate lines'." },
+            { "@type": "HowToStep", "name": "Step 3: Clean the Text", "text": "Click the 'Clean Text' button. The tool will process your text locally in your browser." },
+            { "@type": "HowToStep", "name": "Step 4: Copy or Download", "text": "Review your statistics, then click 'Copy Result' or 'Download Result' to save your clean text." }
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://toolswebsiteai.github.io/text-cleaner#collection",
+          "name": "Related Text Tools",
+          "isPartOf": { "@id": "https://toolswebsiteai.github.io/#website" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://toolswebsiteai.github.io/text-cleaner#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "What is a Text Cleaner?", "acceptedAnswer": { "@type": "Answer", "text": "A Text Cleaner is an online utility that automatically reformats and cleans messy text by removing extra spaces, blank lines, duplicate lines, and unwanted characters." } },
+            { "@type": "Question", "name": "Is this Text Cleaner free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, this tool is 100% free to use with no hidden fees, subscriptions, or account creation required." } },
+            { "@type": "Question", "name": "Does the Text Cleaner save my text?", "acceptedAnswer": { "@type": "Answer", "text": "No. All text processing happens entirely locally within your web browser. No data is sent to or stored on any server." } },
+            { "@type": "Question", "name": "Can I remove extra spaces?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the tool can automatically remove duplicate spaces, trim spaces from the beginnings and ends of lines, and convert multiple spaces into a single space." } },
+            { "@type": "Question", "name": "Can I clean copied text?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. It is designed to clean text copied from PDFs, Microsoft Word, web pages, and emails, which often carry hidden formatting issues." } }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- 1. Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-primary text-2xl"></i>
+                    <a href="https://toolswebsiteai.github.io/" class="font-bold text-xl text-slate-800 tracking-tight">ToolsWebsite<span class="text-primary">AI</span></a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-slate-600 hover:text-primary font-medium transition-colors">Home</a>
+                    <a href="#" class="text-primary font-medium transition-colors tool-name">Text Cleaner</a>
+                    <a href="#" class="text-slate-600 hover:text-primary font-medium transition-colors">All Tools</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- 2. Breadcrumb -->
+        <nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="https://toolswebsiteai.github.io/" class="hover:text-primary transition-colors"><i class="fa-solid fa-house mr-2"></i>Home</a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-chevron-right text-xs mx-2"></i>
+                        <span class="text-slate-400">Text Tools</span>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-chevron-right text-xs mx-2"></i>
+                        <span class="text-slate-800 font-medium tool-name">Text Cleaner</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- 3 & 4. H1 & Direct Answer (AEO/GEO Optimization) -->
+        <div class="text-center max-w-4xl mx-auto mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight"><span class="tool-name">Text Cleaner</span> Tool</h1>
+            <p class="text-lg text-slate-600 mb-6">
+                <strong>What is a <span class="tool-name">Text Cleaner</span>?</strong> A <span class="tool-name">Text Cleaner</span> is a free online tool that automatically removes unwanted formatting, extra spaces, empty lines, duplicate text, and special characters. It processes your text 100% locally in your browser for total privacy.
+            </p>
+        </div>
+
+        <!-- 5, 6, 7, 8, 9. Text Cleaner Interface -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-16">
+            <div class="p-4 bg-slate-50 border-b border-slate-200 flex flex-wrap gap-3 justify-between items-center">
+                <div class="flex gap-2">
+                    <button onclick="pasteText()" class="px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors text-sm font-medium flex items-center gap-2 shadow-sm">
+                        <i class="fa-regular fa-clipboard"></i> Paste
+                    </button>
+                    <button onclick="clearText()" class="px-4 py-2 bg-white border border-slate-300 text-red-600 rounded-lg hover:bg-red-50 transition-colors text-sm font-medium flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-trash-can"></i> Clear
+                    </button>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="copyText()" class="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors text-sm font-medium flex items-center gap-2 shadow-sm">
+                        <i class="fa-regular fa-copy"></i> Copy Result
+                    </button>
+                    <button onclick="downloadText()" class="px-4 py-2 bg-white border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors text-sm font-medium flex items-center gap-2 shadow-sm">
+                        <i class="fa-solid fa-download"></i> Download
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <!-- Input Area -->
+                <div class="border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col">
+                    <div class="p-3 bg-slate-100/50 text-xs font-semibold text-slate-500 uppercase tracking-wider flex justify-between">
+                        <span>Original Text</span>
+                        <span id="in-stats">0 Chars | 0 Words | 0 Lines</span>
+                    </div>
+                    <textarea id="inputText" class="w-full flex-grow p-4 min-h-[300px] lg:min-h-[400px] resize-y focus:outline-none focus:ring-2 focus:ring-primary/50 text-slate-700 text-base" placeholder="Paste or type your messy text here..."></textarea>
+                </div>
+
+                <!-- Output Area -->
+                <div class="flex flex-col bg-slate-50">
+                    <div class="p-3 bg-slate-100/50 text-xs font-semibold text-slate-500 uppercase tracking-wider flex justify-between border-b border-slate-200">
+                        <span>Cleaned Text</span>
+                        <span id="out-stats" class="text-primary">0 Chars | 0 Words | 0 Lines</span>
+                    </div>
+                    <textarea id="outputText" readonly class="w-full flex-grow p-4 min-h-[300px] lg:min-h-[400px] resize-y focus:outline-none bg-transparent text-slate-700 text-base" placeholder="Your cleaned text will appear here..."></textarea>
+                </div>
+            </div>
+
+            <!-- Options Panel -->
+            <div class="border-t border-slate-200 bg-white p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold text-slate-800"><i class="fa-solid fa-sliders text-primary mr-2"></i>Cleaning Options</h3>
+                    <button onclick="resetOptions()" class="text-sm text-slate-500 hover:text-primary transition-colors underline">Reset Defaults</button>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="optionsContainer">
+                    <!-- Checkboxes generated via JS for cleaner HTML structure -->
+                </div>
+
+                <div class="mt-8 flex justify-center">
+                    <button onclick="processText()" class="px-8 py-3 bg-primary text-white rounded-xl hover:bg-secondary transition-all transform hover:-translate-y-0.5 shadow-lg shadow-indigo-200 text-lg font-semibold flex items-center gap-2 w-full sm:w-auto">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Clean Text Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. How-to Section (GEO step-by-step) -->
+        <section class="mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-6 text-center">How to Clean Text Online</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-indigo-50 rounded-bl-full flex items-start justify-end p-3 text-indigo-200 font-bold text-xl">1</div>
+                    <i class="fa-regular fa-paste text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-slate-800 mb-2">Paste Text</h3>
+                    <p class="text-slate-600 text-sm">Copy your messy content from Word, PDF, or a website and paste it into the input box.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-indigo-50 rounded-bl-full flex items-start justify-end p-3 text-indigo-200 font-bold text-xl">2</div>
+                    <i class="fa-solid fa-list-check text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-slate-800 mb-2">Select Options</h3>
+                    <p class="text-slate-600 text-sm">Choose what to remove: extra spaces, duplicate lines, line breaks, or URLs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-indigo-50 rounded-bl-full flex items-start justify-end p-3 text-indigo-200 font-bold text-xl">3</div>
+                    <i class="fa-solid fa-wand-magic-sparkles text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-slate-800 mb-2">Clean It</h3>
+                    <p class="text-slate-600 text-sm">Click the 'Clean Text Now' button. Processing happens instantly in your browser.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-16 h-16 bg-indigo-50 rounded-bl-full flex items-start justify-end p-3 text-indigo-200 font-bold text-xl">4</div>
+                    <i class="fa-regular fa-copy text-3xl text-primary mb-4"></i>
+                    <h3 class="font-semibold text-slate-800 mb-2">Copy or Download</h3>
+                    <p class="text-slate-600 text-sm">Copy the perfectly formatted result to your clipboard or download it as a .txt file.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Before & After Example -->
+        <section class="mb-16 bg-slate-900 rounded-2xl p-8 text-white shadow-xl">
+            <h2 class="text-2xl font-bold mb-6 text-center">See The Difference</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="text-slate-400 font-semibold mb-2 text-sm uppercase tracking-wide">Before (Messy Copy/Paste)</div>
+                    <div class="bg-slate-800 p-4 rounded-lg font-mono text-sm text-slate-300 whitespace-pre-wrap">This   is a    sentence with   extra spaces.
+
+And here is an empty line above.
+And here is an empty line above.
+
+Tabs	are	annoying	when	copied.
+Check out this link: https://example.com 1234</div>
+                </div>
+                <div>
+                    <div class="text-indigo-400 font-semibold mb-2 text-sm uppercase tracking-wide">After (<span class="tool-name">Text Cleaner</span>)</div>
+                    <div class="bg-slate-800 p-4 rounded-lg font-mono text-sm text-white whitespace-pre-wrap border border-indigo-500/30">This is a sentence with extra spaces.
+And here is an empty line above.
+Tabs are annoying when copied.
+Check out this link:</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 13. 800+ Word Informational Article (GEO & SEO Optimized) -->
+        <article class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12 mb-16 article-content">
+            <h2 class="text-3xl font-bold mt-0" id="what-is-text-cleaner">What Is a <span class="tool-name">Text Cleaner</span>?</h2>
+            <p>
+                A <strong><span class="tool-name">Text Cleaner</span></strong> is a specialized online formatting utility built to automatically fix structural, invisible, and aesthetic errors in plain text. Whether you are typing rapidly, extracting data from poorly structured PDFs, or copying content from heavy word processors, text often carries invisible "baggage." This baggage includes multiple spaces, irregular line breaks, hidden tab characters, and duplicate entries. 
+            </p>
+            <p>
+                Instead of manually hitting backspace hundreds of times, a text cleaning tool utilizes automated rule sets (often regular expressions) to identify and eradicate these formatting anomalies instantly. Our tool is designed to work entirely within your browser environment. This modern architecture guarantees that your sensitive documents, personal writing, or proprietary code are never transmitted across the internet, ensuring absolute privacy and security.
+            </p>
+
+            <h2 id="why-clean-text">Why Clean Text? Practical Applications</h2>
+            <p>
+                Messy text isn't just an eyesore; it breaks digital layouts, skews data analysis, and ruins professional documents. Here are the primary reasons why utilizing a formatting tool is essential:
+            </p>
+            <ul>
+                <li><strong>Data Processing & Spreadsheets:</strong> Extra spaces before or after a word (leading and trailing spaces) will cause Excel or Google Sheets formulas (like VLOOKUP) to fail. Cleaning text ensures data integrity.</li>
+                <li><strong>Web Publishing & Blogging:</strong> Content Management Systems (like WordPress) often misinterpret hidden HTML tags, tabs, or erratic line breaks pasted from Microsoft Word, resulting in broken page layouts.</li>
+                <li><strong>Academic & Professional Writing:</strong> Maintaining strict formatting guidelines requires consistency. Removing double spaces after periods and standardizing paragraph breaks ensures a polished final draft.</li>
+                <li><strong>Programming & Code Cleanliness:</strong> Developers frequently need to sanitize string inputs, remove empty lines from arrays, or clear special characters from JSON feeds.</li>
+            </ul>
+
+            <h2 id="common-text-problems">Common Text Problems Solved</h2>
+            <p>
+                Our <strong>online text cleaning tool</strong> provides targeted solutions for the most frequent copy-paste disasters:
+            </p>
+            <h3>1. Extra and Duplicate Spaces</h3>
+            <p>
+                Typographical errors often lead to double or triple spaces between words. Furthermore, text aligned "justified" in PDFs often translates into massive space gaps when copied to a plain text editor. The "Convert Multiple Spaces to Single" function condenses these gaps instantly, while "Trim Spaces" removes invisible spaces hiding at the start or end of lines.
+            </p>
+            <h3>2. Duplicate and Empty Lines</h3>
+            <p>
+                When scraping web data or compiling lists, you frequently end up with duplicate entries. The "Remove Duplicate Lines" feature scans your entire document and deletes any exact repetitive lines. Similarly, "Remove Empty Lines" compresses your document by deleting all blank gaps, making lists concise and readable.
+            </p>
+            <h3>3. Unwanted Line Breaks</h3>
+            <p>
+                Copying text from a PDF column often forces a hard line break at the end of every physical line, chopping single sentences into fragmented pieces. Using the "Remove Line Breaks" feature merges these fragments back into flowing, natural paragraphs.
+            </p>
+            <h3>4. Removing Numbers, URLs, and Special Characters</h3>
+            <p>
+                If you are performing text analysis, generating word clouds, or preparing text for AI processing, you only want words. The tool allows you to strip out all numbers, remove HTTP/HTTPS URLs, and eliminate punctuation or special characters with a single click.
+            </p>
+
+            <h2 id="text-cleaning-for-different-users">Text Cleaning for Different Users</h2>
+            <p>
+                Because text is the foundational element of the internet, a highly functional formatting tool serves diverse professions:
+            </p>
+            <ul>
+                <li><strong>SEO Professionals:</strong> Need to quickly format lists of keywords, remove duplicate keyword phrases, and ensure URLs aren't mixed into target anchor texts.</li>
+                <li><strong>Social Media Managers:</strong> Often draft posts across multiple apps. Cleaning text removes weird spacing and line breaks before pasting into Instagram or Twitter/X.</li>
+                <li><strong>Content Writers:</strong> Benefit from instant word counts and character counts while ensuring their drafts are free of messy Word-document formatting prior to submission.</li>
+                <li><strong>Researchers & Students:</strong> Gathering quotes from multiple online sources leads to a chaotic document of varying fonts, tabs, and spaces. A text cleaner standardizes the raw information.</li>
+            </ul>
+
+            <h2 id="privacy">Privacy First: 100% Local Browser Processing</h2>
+            <p>
+                Is online text cleaning safe? The answer depends on the tool. Many legacy online tools transmit your pasted text to a remote server, process it, and send it back. This poses a massive security risk if you are cleaning legal documents, medical transcripts, or proprietary business emails.
+            </p>
+            <p>
+                Our <span class="tool-name">Text Cleaner</span> is engineered using modern JavaScript client-side processing. This means <strong>your text never leaves your device</strong>. The computer or smartphone you are using executes the cleaning rules locally. You can even load the webpage, disconnect from the internet, and the tool will continue to function perfectly offline. We do not require accounts, we do not use databases to store your text, and we guarantee total privacy.
+            </p>
+
+            <h2 id="manual-vs-automated">Text Cleaner vs Manual Editing</h2>
+            <p>
+                When should you use an automated text formatter instead of editing manually? If you have a three-sentence email, fixing a double space manually takes two seconds. However, if you are dealing with a 50-page transcribed document, a list of 5,000 email addresses, or a massive dumped text file, manual editing is impossible.
+            </p>
+            <p>
+                An automated cleaner saves hours of tedious labor, reduces the risk of human error (like missing a hidden tab character), and provides immediate statistical feedback (Original vs. Cleaned word counts). It serves as the vital first step in content editing—stripping away the structural mess so that the human editor can focus solely on the narrative and tone.
+            </p>
+        </article>
+
+        <!-- 14. FAQ Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto space-y-4">
+                
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>What is a <span class="tool-name">Text Cleaner</span>?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        A Text Cleaner is a free online tool designed to automatically remove unwanted formatting, extra spaces, empty lines, duplicate lines, and special characters from messy text.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>Is this <span class="tool-name">Text Cleaner</span> free to use?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        Yes, our tool is 100% free forever. There are no hidden fees, no subscriptions, and no limits on how much text you can process.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>Does the tool save or store my text?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        Absolutely not. All processing happens locally within your own web browser. Your text is never uploaded to our servers, ensuring complete privacy and security for your sensitive data.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>Can I remove duplicate lines from a list?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        Yes! Just check the "Remove Duplicate Lines" option. The tool will scan your entire list, keep the first instance of every line, and automatically delete any identical repeating lines.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>How do I remove extra spaces between words?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        Select "Multiple spaces to single" to convert accidental double or triple spaces into standard single spaces. You can also select "Trim line spaces" to remove hidden spaces at the start and end of paragraphs.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>Does it work offline?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        Yes. Because the tool relies entirely on client-side JavaScript, once the webpage has fully loaded in your browser, you can disconnect from the internet and continue cleaning text offline.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>Is there a word or character limit?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        There is no artificial limit imposed by our website. The only limit is the memory capacity of your specific web browser, which can easily handle hundreds of thousands of words instantly.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>Can I clean text on my mobile phone?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        Yes, the interface is fully responsive and touch-friendly. It works seamlessly on iOS, Android, tablets, and desktop computers.
+                    </div>
+                </details>
+
+                <details class="group bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+                    <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-800 hover:bg-slate-50 transition-colors">
+                        <span>Can I download the cleaned text?</span>
+                        <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
+                    </summary>
+                    <div class="text-slate-600 p-5 pt-0 border-t border-slate-100 mt-2">
+                        Yes, click the "Download" button to automatically save your perfectly formatted result as a standard `.txt` file directly to your device.
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 16. Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles text-primary text-xl"></i>
+                        <span class="font-bold text-xl text-white tracking-tight">ToolsWebsite<span class="text-primary">AI</span></span>
+                    </div>
+                    <p class="text-sm">Providing fast, free, and secure online tools to boost your productivity. All processing is done locally in your browser for absolute privacy.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Related Tools</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Word Counter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Case Converter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Lorem Ipsum Generator</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Remove Line Breaks</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">© <span id="currentYear"></span> ToolsWebsiteAI. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Core Tool Functionality & Dynamic Variable Injection -->
+    <script>
+        // ==========================================
+        // 2. CUSTOM TOOL NAME VARIABLE
+        // Edit this variable to change the tool name across the entire page
+        // ==========================================
+        const TOOL_NAME = "Text Cleaner";
+
+        // Apply dynamic tool name on load
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+            // Update visible texts
+            document.querySelectorAll('.tool-name').forEach(el => el.textContent = TOOL_NAME);
+
+            // Update Meta & SEO Tags dynamically
+            const titleString = `Free ${TOOL_NAME} Online | Remove Extra Spaces & Formatting`;
+            document.title = titleString;
+            document.querySelector('.dynamic-meta-title-tag').setAttribute("content", titleString);
+            document.querySelector('.dynamic-og-title').setAttribute("content", titleString);
+            document.querySelector('.dynamic-twitter-title').setAttribute("content", titleString);
+            
+            const descString = `Use our free ${TOOL_NAME} to remove extra spaces, empty lines, duplicate lines, and special characters. Clean your text instantly with 100% local browser processing.`;
+            document.querySelector('.dynamic-meta-desc').setAttribute("content", descString);
+            document.querySelector('.dynamic-og-desc').setAttribute("content", descString);
+            document.querySelector('.dynamic-twitter-desc').setAttribute("content", descString);
+
+            // Update JSON-LD Schema string safely
+            let schemaTag = document.getElementById('schema-jsonld');
+            if (schemaTag) {
+                // To avoid breaking actual JSON structure if string isn't exactly matched, 
+                // we do a targeted replace for "Text Cleaner" to the new TOOL_NAME.
+                let schemaData = schemaTag.innerHTML;
+                schemaData = schemaData.replace(/Text Cleaner/g, TOOL_NAME);
+                schemaTag.innerHTML = schemaData;
+            }
+
+            // Initial UI Setup
+            setupOptions();
+            updateStats('in-stats', document.getElementById('inputText').value);
+            updateStats('out-stats', document.getElementById('outputText').value);
+        });
+
+        // ==========================================
+        // TOOL OPTIONS CONFIGURATION
+        // ==========================================
+        const cleaningOptions = [
+            { id: "opt-multi-space", label: "Multiple spaces to single", checked: true },
+            { id: "opt-trim-lines", label: "Trim line spaces", checked: true },
+            { id: "opt-empty-lines", label: "Remove empty lines", checked: true },
+            { id: "opt-duplicate-lines", label: "Remove duplicate lines", checked: false },
+            { id: "opt-line-breaks", label: "Remove line breaks", checked: false },
+            { id: "opt-tabs", label: "Remove tabs", checked: true },
+            { id: "opt-special", label: "Remove special characters", checked: false },
+            { id: "opt-punctuation", label: "Remove punctuation", checked: false },
+            { id: "opt-numbers", label: "Remove numbers", checked: false },
+            { id: "opt-urls", label: "Remove URLs", checked: false },
+            { id: "opt-lowercase", label: "Convert to lowercase", checked: false },
+            { id: "opt-uppercase", label: "Convert to UPPERCASE", checked: false }
+        ];
+
+        function setupOptions() {
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+            cleaningOptions.forEach(opt => {
+                const checkedAttr = opt.checked ? 'checked' : '';
+                container.innerHTML += `
+                    <label class="checkbox-container flex items-start cursor-pointer relative group">
+                        <input type="checkbox" id="${opt.id}" class="peer sr-only" ${checkedAttr}>
+                        <div class="w-5 h-5 border-2 border-slate-300 rounded flex items-center justify-center mr-3 mt-0.5 transition-colors group-hover:border-primary peer-focus:ring-2 peer-focus:ring-primary/50 bg-white">
+                            <svg class="w-3 h-3 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span class="text-sm font-medium text-slate-700 select-none">${opt.label}</span>
+                    </label>
+                `;
+            });
+        }
+
+        function resetOptions() {
+            setupOptions();
+        }
+
+        // ==========================================
+        // TEXT CLEANING LOGIC
+        // ==========================================
+        function processText() {
+            let text = document.getElementById('inputText').value;
+            
+            // Check options safely
+            const isChecked = (id) => document.getElementById(id) && document.getElementById(id).checked;
+
+            if (isChecked('opt-tabs')) {
+                text = text.replace(/\t/g, ' '); // Convert tabs to space first
+            }
+
+            if (isChecked('opt-urls')) {
+                // Matches standard HTTP/HTTPS URLs
+                text = text.replace(/https?:\/\/[^\s]+/g, '');
+            }
+
+            if (isChecked('opt-numbers')) {
+                text = text.replace(/\d+/g, '');
+            }
+
+            if (isChecked('opt-special')) {
+                // Keep words, spaces, basic punctuation, newlines
+                text = text.replace(/[^\w\s.,!?'"\n\r-]/g, '');
+            }
+
+            if (isChecked('opt-punctuation')) {
+                // Remove standard punctuation marks
+                text = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()""'']/g, "");
+            }
+
+            if (isChecked('opt-trim-lines')) {
+                text = text.split('\n').map(line => line.trim()).join('\n');
+            }
+
+            if (isChecked('opt-multi-space')) {
+                // Replace 2+ spaces with 1 space, but don't touch newlines
+                text = text.replace(/[ \t]{2,}/g, ' ');
+            }
+
+            if (isChecked('opt-empty-lines')) {
+                // Remove lines that are entirely empty or whitespace
+                text = text.replace(/^\s*[\r\n]/gm, '');
+            }
+
+            if (isChecked('opt-duplicate-lines')) {
+                let lines = text.split('\n');
+                let uniqueLines = [...new Set(lines)];
+                text = uniqueLines.join('\n');
+            }
+
+            if (isChecked('opt-line-breaks')) {
+                // Convert newlines to spaces
+                text = text.replace(/[\r\n]+/g, ' ');
+                // Clean up any double spaces created by the merge
+                if (isChecked('opt-multi-space')) {
+                    text = text.replace(/[ \t]{2,}/g, ' ');
+                }
+            }
+
+            if (isChecked('opt-lowercase')) {
+                text = text.toLowerCase();
+            } else if (isChecked('opt-uppercase')) {
+                text = text.toUpperCase();
+            }
+
+            document.getElementById('outputText').value = text;
+            updateStats('out-stats', text);
+            
+            // Optional: Auto-scroll to output on mobile
+            if(window.innerWidth < 1024) {
+                document.getElementById('outputText').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // ==========================================
+        // UTILITIES & STATS
+        // ==========================================
+        document.getElementById('inputText').addEventListener('input', function() {
+            updateStats('in-stats', this.value);
+        });
+
+        function updateStats(elementId, text) {
+            const charCount = text.length;
+            const wordCount = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+            const lineCount = text === '' ? 0 : text.split('\n').length;
+            
+            document.getElementById(elementId).textContent = `${charCount} Chars | ${wordCount} Words | ${lineCount} Lines`;
+        }
+
+        async function pasteText() {
+            try {
+                const text = await navigator.clipboard.readText();
+                document.getElementById('inputText').value = text;
+                updateStats('in-stats', text);
+            } catch (err) {
+                alert('Failed to read clipboard. Please paste manually (Ctrl+V or Cmd+V).');
+            }
+        }
+
+        function clearText() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            updateStats('in-stats', '');
+            updateStats('out-stats', '');
+        }
+
+        function copyText() {
+            const text = document.getElementById('outputText').value;
+            if(!text) {
+                alert("Nothing to copy!");
+                return;
+            }
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.currentTarget;
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = `<i class="fa-solid fa-check"></i> Copied!`;
+                btn.classList.replace('bg-slate-800', 'bg-green-600');
+                btn.classList.replace('hover:bg-slate-700', 'hover:bg-green-500');
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.classList.replace('bg-green-600', 'bg-slate-800');
+                    btn.classList.replace('hover:bg-green-500', 'hover:bg-slate-700');
+                }, 2000);
+            }).catch(() => {
+                alert("Copy failed. Please select the text and copy manually.");
+            });
+        }
+
+        function downloadText() {
+            const text = document.getElementById('outputText').value;
+            if(!text) {
+                alert("Nothing to download!");
+                return;
+            }
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const fileName = TOOL_NAME.toLowerCase().replace(/\s+/g, '-') + '-result.txt';
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
