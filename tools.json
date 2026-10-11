@@ -1,32 +1,182 @@
-{
-  "tools": [
-    {
-      "id": 1,
-      "title": "AI Article Writer",
-      "description": "Smart text options and auto-generating features for professional bloggers and content creators.",
-      "image": "images/d167a602-8e81-4d2a-bcb6-8e233bed (1).jpg",
-      "link": "word-counter.html"
-    },
-    {
-      "id": 2,
-      "title": "Free Online Character Counter & Word Count Tool",
-      "description": "What is a character counter?</strong> Our free online character counter instantly calculates the total number of characters, words, sentences, and paragraphs in your text. Just paste your content below to get real-time statistics—no signup required.",
-      "image": "images/05e78667-8057-41d3-8092-6efcb886.jpg",
-      "link": "Character-Counter.html"
-    },
-    {
-      "id": 3,
-      "title": " Text Formatter & Case Converter",
-      "description": "100% free, mobile-friendly, and completely private—all processing happens directly in your browser, so your data never leaves your device. Boost your productivity today with ToolsWebsiteAI!",
-      "image": "images/watermarked_img_1409920381401982.jpg",
-      "link": "Case-Converter.html"
-    },
-    {
-      "id": 4,
-      "title": "Free Text Cleaner Online – Clean, Format & Fix Text",
-      "description": "Free Text Cleaner to remove extra spaces, empty lines, duplicate lines and unwanted characters. Clean and format text instantly online.",
-      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-      "link": "Text-Cleaner.html"
-    }
-  ]
-}
+[
+  {
+    "name": "Framer AI",
+    "description": "Generate full, responsive, and animated landing pages directly from text prompts within seconds.",
+    "image": "images/tool21.webp",
+    "link": "https://www.framer.com"
+  },
+  {
+    "name": "Claude 3.5 Sonnet",
+    "description": "Anthropic's cutting-edge AI assistant with industry-leading reasoning, coding, and long-document analysis.",
+    "image": "images/tool22.webp",
+    "link": "https://claude.ai"
+  },
+  {
+    "name": "Perplexity AI",
+    "description": "An interactive conversational answer engine that cites verified online sources in real-time.",
+    "image": "images/tool23.webp",
+    "link": "https://www.perplexity.ai"
+  },
+  {
+    "name": "ChatPDF",
+    "description": "Upload dense academic papers, financial reports, or books and extract insights via conversation.",
+    "image": "images/tool24.webp",
+    "link": "https://www.chatpdf.com"
+  },
+  {
+    "name": "Beautiful.ai",
+    "description": "Smart presentation software that automatically designs and formats slides while you type content.",
+    "image": "images/tool25.webp",
+    "link": "https://www.beautiful.ai"
+  },
+  {
+    "name": "Murf AI",
+    "description": "Studio-quality AI voice generator for podcasts, presentations, audiobooks, and e-learning videos.",
+    "image": "images/tool26.webp",
+    "link": "https://murf.ai"
+  },
+  {
+    "name": "Veed.io",
+    "description": "Browser-based video editor offering auto-subtitles, noise removal, and smart scene transitions.",
+    "image": "images/tool27.webp",
+    "link": "https://www.veed.io"
+  },
+  {
+    "name": "Otter.ai",
+    "description": "Automated meeting transcription assistant that records audio, writes notes, and highlights action points.",
+    "image": "images/tool28.webp",
+    "link": "https://otter.ai"
+  },
+  {
+    "name": "Cursor",
+    "description": "An AI-first code editor built on VS Code designed for rapid code generation and multi-file refactoring.",
+    "image": "images/tool29.webp",
+    "link": "https://www.cursor.com"
+  },
+  {
+    "name": "Soundraw",
+    "description": "Create royalty-free background music by selecting genre, mood, tempo, and instrumental layers.",
+    "image": "images/tool30.webp",
+    "link": "https://soundraw.io"
+  },
+  {
+    "name": "InVideo AI",
+    "description": "Generate complete YouTube and TikTok videos with scripts, b-roll footage, and voiceovers from simple prompts.",
+    "image": "images/tool31.webp",
+    "link": "https://invideo.io"
+  },
+  {
+    "name": "Looka",
+    "description": "AI logo maker and brand identity platform helping new entrepreneurs design logos and marketing materials.",
+    "image": "images/tool32.webp",
+    "link": "https://looka.com"
+  },
+  {
+    "name": "Kaiber AI",
+    "description": "Transform static artwork and prompts into stylized, animated music videos and cinematic motion clips.",
+    "image": "images/tool33.webp",
+    "link": "https://kaiber.ai"
+  },
+  {
+    "name": "HeyGen",
+    "description": "Create customized, lip-synced AI spokesperson videos for sales outreach and product tutorials.",
+    "image": "images/tool34.webp",
+    "link": "https://www.heygen.com"
+  },
+  {
+    "name": "Phind",
+    "description": "An intelligent search engine tailored for developers to solve debugging and software engineering problems.",
+    "image": "images/tool35.webp",
+    "link": "https://www.phind.com"
+  },
+  {
+    "name": "Taskade",
+    "description": "All-in-one AI agent workspace for team mind-mapping, workflow automation, and project management.",
+    "image": "images/tool36.webp",
+    "link": "https://www.taskade.com"
+  },
+  {
+    "name": "DeepL Write",
+    "description": "AI-powered writing companion that corrects grammar, refines syntax, and improves sentence nuance.",
+    "image": "images/tool37.webp",
+    "link": "https://www.deepl.com/write"
+  },
+  {
+    "name": "Fliki AI",
+    "description": "Convert blog articles and scripts into narrated videos using authentic multilingual synthetic voices.",
+    "image": "images/tool38.webp",
+    "link": "https://fliki.ai"
+  },
+  {
+    "name": "Clipdrop",
+    "description": "Comprehensive creative suite by Stability AI featuring image cleanup, background removal, and re-lighting.",
+    "image": "images/tool39.webp",
+    "link": "https://clipdrop.co"
+  },
+  {
+    "name": "Luma Dream Machine",
+    "description": "Next-generation video foundation model capable of rendering realistic 5-second camera movements.",
+    "image": "images/tool40.webp",
+    "link": "https://lumalabs.ai/dream-machine"
+  },
+  {
+    "name": "Replit AI",
+    "description": "Interactive collaborative programming environment with inline code completion and runtime debugging.",
+    "image": "images/tool41.webp",
+    "link": "https://replit.com"
+  },
+  {
+    "name": "Pika Labs",
+    "description": "Generative video tool for adding visual effects, object transformations, and camera pans to images.",
+    "image": "images/tool42.webp",
+    "link": "https://pika.art"
+  },
+  {
+    "name": "Durable AI",
+    "description": "Create a fully functional small business website with copy, images, and contact forms in thirty seconds.",
+    "image": "images/tool43.webp",
+    "link": "https://durable.co"
+  },
+  {
+    "name": "Opus Clip",
+    "description": "Repurpose long YouTube podcasts into viral, auto-captioned shorts for TikTok and Instagram Reels.",
+    "image": "images/tool44.webp",
+    "link": "https://www.opus.pro"
+  },
+  {
+    "name": "Gamma App",
+    "description": "A fresh medium for presenting ideas; produces interactive presentations, webpages, and document briefs.",
+    "image": "images/tool45.webp",
+    "link": "https://gamma.app"
+  },
+  {
+    "name": "Suno AI",
+    "description": "State-of-the-art music engine generating radio-quality full songs, lyrics, and melodies from text descriptions.",
+    "image": "images/tool46.webp",
+    "link": "https://suno.com"
+  },
+  {
+    "name": "Udio",
+    "description": "High-fidelity generative audio platform capable of synthesizing intricate vocals across diverse musical styles.",
+    "image": "images/tool47.webp",
+    "link": "https://www.udio.com"
+  },
+  {
+    "name": "Magnific AI",
+    "description": "Advanced image upscaler that hallucinates fine textures, skin pores, and microscopic visual details.",
+    "image": "images/tool48.webp",
+    "link": "https://magnific.ai"
+  },
+  {
+    "name": "Consensus",
+    "description": "AI-backed academic search engine summarizing findings from over 200 million peer-reviewed research papers.",
+    "image": "images/tool49.webp",
+    "link": "https://consensus.app"
+  },
+  {
+    "name": "Krea AI",
+    "description": "Real-time canvas generation allowing designers to paint simple shapes and see instant high-res renders.",
+    "image": "images/tool50.webp",
+    "link": "https://www.krea.ai"
+  }
+]
